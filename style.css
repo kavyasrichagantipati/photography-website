@@ -1,0 +1,344 @@
+.{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 40px 20px 0 20px;
+    background : #5bbd5c;
+
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.966), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:25px solid rgba(180, 198, 223, 0.18);
+    box-shadow: 0 8px 42px 0 rgba(0, 0, 0, 0.37);
+    
+    position: relative;
+    min-height: 100vh;
+}
+
+.container .heading{
+    width: 50%;
+    padding-bottom: 50px;
+}
+
+.container .heading .fonts{
+    color: #311e1e;
+    font-size: 3em;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #222;
+    font-family: 'ABHAYA LIBRE 600' ;
+}
+
+
+ span{
+    font-weight: 100;
+    font-family:'ABHAYA LIBRE 600';
+}
+
+.container .box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.container .box .dream{
+    display: flex;
+    flex-direction: column;
+    width: 32.5%
+       
+}
+
+.container .box .dream img{
+    width: 100%;
+    height: 200px;
+    padding-bottom: 15px;
+    border-radius: 5px;
+    display: none;
+    height:100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.container .box .dream img:hover{
+    transform: scale(1.1);
+}
+
+.container .box .dream img:nth-child(1){
+    display: block;
+}
+
+.container .box .dream img:nth-child(2){
+    display: block;
+}
+
+.container .box .dream img:nth-child(3){
+    display: block;
+}
+
+.container .box .dream img:nth-child(4){
+    display: block;
+}
+
+.container .box .dream img:nth-child(5){
+    display: block;
+}
+
+.container .box .dream img:nth-child(6){
+    display: block;
+}
+
+.container .box .dream img:nth-child(7){
+  display: block;
+}
+
+.container .box .dream img:nth-child(8){
+  display: block;
+}
+
+.container .box .dream img:nth-child(9){
+  display: block;
+}
+
+.container .box .dream img:nth-child(10){
+  display: block;
+}
+
+
+
+.container .btn{
+    margin: 40px 0 70px 0;
+    background: #222;
+    padding: 15px 40px;
+    border-radius: 5px;
+}
+
+.container .btn a{
+   color: #fff;
+   font-size: 1.2em;
+   text-decoration: none;
+   font-weight: bolder;
+   letter-spacing: 3px;
+}
+
+.btncontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    border: 10px;
+    border-radius: 5px;
+    width: 250px;
+    padding: 6px;
+    font-size: 20px;
+    background-color: #cbb7b7;
+    color: rgb(209, 220, 220);
+    cursor: pointer;
+
+}
+.title {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  margin: 0px 0;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width:100%;
+  background: #9a8f7c; /* Set the background color you want */
+  z-index: 1000; /* Set a higher z-index to make sure it's on top of other elements */
+}
+
+.title h1 {
+  font-size: em;
+  color: #293a3a; 
+  
+}
+
+
+
+ body
+ {
+   margin: 50px 0 0 0;
+   padding: 0;
+   
+   /* make it look decent enough */
+   background: #ffffff;
+   color: #bc5a5a;
+   font-family: "Avenir Next", "Avenir", sans-serif;
+ }
+ 
+ #menuToggle
+ {
+    position: fixed;
+    top: 30px;
+    left: 20px;
+    z-index: 1500;
+ }
+ 
+ #menuToggle a
+ {
+   text-decoration: none;
+   color: #232323;
+   
+   transition: color 0.3s ease;
+ }
+ 
+ #menuToggle a:hover
+ {
+   color: tomato;
+ }
+ 
+
+ #menuToggle input
+ {
+   display: block;
+   width: 40px;
+   height: 32px;
+   position: absolute;
+   top: -7px;
+   left: -5px;
+   
+   cursor: pointer;
+   
+   opacity: 0; /* hide this */
+   z-index: 2; /* and place it over the hamburger */
+   
+   -webkit-touch-callout: none;
+ }
+ 
+ /*
+  * Just a quick hamburger
+  */
+ #menuToggle span
+ {
+   display: block;
+   width: 30px;
+   height: 4px;
+   margin-bottom: 5px;
+   position: relative;
+   
+   
+   background: #3c3737;
+   border-radius: 3px;
+   
+   z-index: 1;
+   
+   transform-origin: 4px 0px;
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               opacity 0.55s ease;
+ }
+ 
+ #menuToggle span:first-child
+ {
+   transform-origin: 0% 0%;
+ }
+ 
+ #menuToggle span:nth-last-child(2)
+ {
+   transform-origin: 0% 100%;
+ }
+ 
+ /* 
+  * Transform all the slices of hamburger
+  * into a crossmark.
+  */
+ #menuToggle input:checked ~ span
+ {
+   opacity: 1;
+   transform: rotate(45deg) translate(-2px, -1px);
+   background: #232323;
+ }
+ 
+ /*
+  * But let's hide the middle one.
+  */
+ #menuToggle input:checked ~ span:nth-last-child(3)
+ {
+   opacity: 0;
+   transform: rotate(0deg) scale(0.2, 0.2);
+ }
+ 
+ /*
+  * Ohyeah and the last one should go the other direction
+  */
+ #menuToggle input:checked ~ span:nth-last-child(2)
+ {
+   transform: rotate(-45deg) translate(0, -1px);
+ }
+ 
+ /*
+  * Make this absolute positioned
+  * at the top left of the screen
+  */
+ #menu
+ {
+   position: fixed;
+   width: 300px;
+   margin: -100px 0 0 -50px;
+   padding: 50px;
+   padding-top: 125px;
+   background: #ededed;
+   list-style-type: none;
+   -webkit-font-smoothing: antialiased;
+   
+   transform-origin: 0% 0%;
+   transform: translate(-100%, 0);
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+ }
+ 
+ #menu li
+ {
+   padding: 10px 0;
+   font-size: 22px;
+ }
+ 
+ /*
+  * And let's slide it in from the left
+  */
+ #menuToggle input:checked ~ ul
+ {
+   transform: none;
+ }
+
+ .content-container{
+    height: 100%;
+    overflow-y: auto;
+ }
+
+@media only screen and (max-width: 769px){
+    .container .box{
+      flex-direction: column;
+    }
+    .container .box .dream{
+      width:100%
+    }
+}
+@media only screen and (max-width: 643px){
+     .container .heading{
+    width: 100%;
+    
+}
+
+.container .heading h3{
+    font-size: 1em;
+    
+}
+}
+
+
+
+ 
